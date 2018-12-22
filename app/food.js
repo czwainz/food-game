@@ -30,7 +30,7 @@ function drawButtons() {
     let button = chrissy.snacks[i];
     buttonTemplate += `
     <div class="food-buttons d-flex justify-content-center">
-      <button class="btn btn-secondary my-2 shadow" onclick="eat(${button.health})">${button.name}</button>
+      <button class="btn btn-secondary my-1 shadow-sm" onclick="eat(${button.health})">${button.name}</button>
     </div>
     `
   }
@@ -42,10 +42,10 @@ drawButtons()
 function update(index) {
   let template = ''
   template = `
-  <img src="${chrissy.moods[index].image}" style="max-width: 13rem; height: auto; border: 2px solid gray" class="shadow"/>
-  <h1><strong>Chrissy</strong></h1>
-  <h4>Health: ${chrissy.healthIndex}</h4>
-  <h4>Snacks: ${chrissy.foodCount}</h4>
+    <img src="${chrissy.moods[index].image}" style="max-width: 13rem; height: auto; border: 1px solid gray" class="shadow-lg"/>
+      <h1 class="mt-2"><strong>Chrissy</strong></h1>
+      <h4>Health: ${chrissy.healthIndex}</h4>
+      <h4>Snacks: ${chrissy.foodCount}</h4>
   `
   document.getElementById('chrissy-stats').innerHTML = template
 }
@@ -54,7 +54,7 @@ function reset() {
   chrissy.foodCount = 0
   chrissy.healthIndex = 100
   changePics()
-  update()
+  update(chrissy.healthIndex)
 }
 
 function eat(healthIndex) {

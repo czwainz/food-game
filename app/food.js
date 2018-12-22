@@ -12,12 +12,12 @@ let chrissy = {
     { name: 'So Healthy!', image: 'app/likesohealthy.png' }
   ],
   snacks: [
-    { name: 'Chia Seeds', health: 1, description: 'Ch-Ch-Ch-Chia' },
-    { name: 'Banana', health: 5, description: 'B-A-N-A-N-A-S!' },
-    { name: 'Kale', health: 10, description: 'What the Kale?!' },
-    { name: 'Starburst', health: -2, description: 'Juicy!' },
+    { name: 'Nuts', health: 1, description: 'Ch-Ch-Ch-Chia' },
+    { name: 'Bananas', health: 5, description: 'B-A-N-A-N-A-S!' },
+    { name: 'Kale Salad', health: 10, description: 'What the Kale?!' },
+    { name: 'Starbursts', health: -2, description: 'Juicy!' },
     { name: 'Cookies', health: -7, description: 'Cookie Monster!' },
-    { name: 'Pizza!', health: -15, description: 'Pizza Party!' }
+    { name: 'Pizza', health: -15, description: 'Pizza Party!' }
   ]
 }
 
@@ -29,8 +29,8 @@ function drawButtons() {
   for (let i = 0; i < chrissy.snacks.length; i++) {
     let button = chrissy.snacks[i];
     buttonTemplate += `
-    <div class="food-buttons">
-      <button onclick="eat(${button.health})">${button.name}</button>
+    <div class="food-buttons d-flex justify-content-center">
+      <button class="btn btn-secondary my-2 shadow" onclick="eat(${button.health})">${button.name}</button>
     </div>
     `
   }
@@ -42,8 +42,8 @@ drawButtons()
 function update(index) {
   let template = ''
   template = `
-  <img src="${chrissy.moods[index].image}" style="height: 250px"/>
-  <h1>Chrissy</h1>
+  <img src="${chrissy.moods[index].image}" style="max-width: 13rem; height: auto; border: 2px solid gray" class="shadow"/>
+  <h1><strong>Chrissy</strong></h1>
   <h4>Health: ${chrissy.healthIndex}</h4>
   <h4>Snacks: ${chrissy.foodCount}</h4>
   `

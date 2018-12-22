@@ -43,9 +43,9 @@ function update(index) {
   let template = ''
   template = `
     <img src="${chrissy.moods[index].image}" style="max-width: 13rem; height: auto; border: 1px solid gray" class="shadow-lg"/>
-      <h1 class="mt-2"><strong>Chrissy</strong></h1>
-      <h4>Health: ${chrissy.healthIndex}</h4>
-      <h4>Snacks: ${chrissy.foodCount}</h4>
+      <h2 class="my-2"><strong>Chrissy</strong></h1>
+      <h5>Health: ${chrissy.healthIndex}</h5>
+      <h5>Snacks: ${chrissy.foodCount}</h5>
   `
   document.getElementById('chrissy-stats').innerHTML = template
 }

@@ -13,7 +13,7 @@ let chrissy = {
     { name: 'So Healthy!', img: 'app/likesohealthy.png' }
   ],
   snacks: [
-    { name: 'Seeds', health: 1, description: 'Ch-Ch-Ch-Chia' },
+    { name: 'Chia Seeds', health: 1, description: 'Ch-Ch-Ch-Chia' },
     { name: 'Bananas', health: 5, description: 'B-A-N-A-N-A-S!' },
     { name: 'Kale Salad', health: 10, description: 'What the Kale?!' },
     { name: 'Starbursts', health: -2, description: 'Juicy!' },

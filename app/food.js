@@ -56,6 +56,8 @@ function reset() {
   chrissy.healthIndex = 100
   changePics()
   update(chrissy.healthIndex)
+  document.querySelectorAll('button.food').forEach(button => button.removeAttribute('disabled'))
+
 }
 
 function eat(healthIndex) {
@@ -87,8 +89,7 @@ function changePics() {
     update(1)
     return
   } else if (chrissy.healthIndex <= 0) {
-    document.querySelectorAll('button.food').forEach(button => button.removeAttribute('disabled'))
-    // document.querySelector('button.food').disable = true
+    document.querySelectorAll('button.food').forEach(button => button.setAttribute('disabled', "true"))
     chrissy.healthIndex = 0
     update(0)
     return

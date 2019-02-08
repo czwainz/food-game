@@ -52,12 +52,11 @@ function update(index) {
 }
 
 function reset() {
+  document.querySelectorAll('button.food').forEach(button => button.removeAttribute('disabled'))
   chrissy.foodCount = 0
   chrissy.healthIndex = 100
   changePics()
   update(chrissy.healthIndex)
-  document.querySelectorAll('button.food').forEach(button => button.removeAttribute('disabled'))
-
 }
 
 function eat(healthIndex) {

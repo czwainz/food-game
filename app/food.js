@@ -31,7 +31,7 @@ function drawButtons() {
     let button = chrissy.snacks[i];
     buttonTemplate += `
     <div class="food-buttons d-flex justify-content-center">
-      <button class="btn btn-secondary my-1 shadow-sm" onclick="eat(${button.health})">${button.name}</button>
+      <button class="btn btn-secondary my-1 shadow-sm food" onclick="eat(${button.health})">${button.name}</button>
     </div>
     `
   }
@@ -86,7 +86,10 @@ function changePics() {
   } else if (chrissy.healthIndex >= 1) {
     update(1)
     return
-  } else if (chrissy.healthIndex = 0) {
+  } else if (chrissy.healthIndex <= 0) {
+    document.querySelectorAll('button.food').forEach(button => button.removeAttribute('disabled'))
+    // document.querySelector('button.food').disable = true
+    chrissy.healthIndex = 0
     update(0)
     return
   }

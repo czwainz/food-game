@@ -71,6 +71,7 @@ function changePics() {
   let out = ''
   if (chrissy.healthIndex >= 200) {
     update(6)
+    chrissy.healthIndex = 200
     return
   } else if (chrissy.healthIndex >= 175) {
     update(5)
